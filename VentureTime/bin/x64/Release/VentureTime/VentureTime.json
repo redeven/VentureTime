@@ -1,0 +1,22 @@
+{
+  "Author": "Redeven",
+  "Name": "VentureTime",
+  "InternalName": "VentureTime",
+  "AssemblyVersion": "1.0.0.0",
+  "Description": "Display your retainers' remaining venture time in the DTR bar.",
+  "ApplicableVersion": "any",
+  "RepoUrl": "https://github.com/redeven/VentureTime",
+  "Tags": [
+    "retainer",
+    "venture",
+    "timer"
+  ],
+  "DalamudApiLevel": 10,
+  "LoadRequiredState": 0,
+  "LoadSync": false,
+  "CanUnloadAsync": false,
+  "LoadPriority": 0,
+  "IconUrl": "https://raw.githubusercontent.com/redeven/VentureTime/master/Data/icon.png",
+  "Punchline": "Display your retainers' remaining venture time in the DTR bar.",
+  "AcceptsFeedback": true
+}

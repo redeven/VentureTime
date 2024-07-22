@@ -1,0 +1,19 @@
+{
+  "name": "plugin-venturetime",
+  "version": "1.0.0",
+  "description": "Display your retainers' remaining venture time in the DTR bar",
+  "main": "build.js",
+  "scripts": {
+    "start": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redeven/VentureTime.git"
+  },
+  "author": "Redeven",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/redeven/VentureTime/issues"
+  },
+  "homepage": "https://github.com/redeven/VentureTime#readme"
+}

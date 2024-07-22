@@ -1,0 +1,15 @@
+{
+  "Author": "Redeven",
+  "Name": "VentureTime",
+  "InternalName": "VentureTime",
+  "Punchline": "Display your retainers' remaining venture time in the DTR bar.",
+  "Description": "Display your retainers' remaining venture time in the DTR bar.",
+  "ApplicableVersion": "any",
+  "IconUrl": "https://raw.githubusercontent.com/redeven/VentureTime/master/Data/icon.png",
+  "RepoUrl": "https://github.com/redeven/VentureTime",
+  "Tags": [
+    "retainer",
+    "venture",
+    "timer"
+  ]
+}
