@@ -2,7 +2,7 @@
   "Author": "Redeven",
   "Name": "VentureTime",
   "InternalName": "VentureTime",
-  "AssemblyVersion": "1.0.0.0",
+  "AssemblyVersion": "1.0.0.1",
   "Description": "Display your retainers' remaining venture time in the DTR bar.",
   "ApplicableVersion": "any",
   "RepoUrl": "https://github.com/redeven/VentureTime",

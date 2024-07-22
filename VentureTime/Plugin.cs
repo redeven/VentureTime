@@ -87,10 +87,12 @@ public sealed class Plugin : IDalamudPlugin
             {
                 var upcomingVenture = pendingVentures.Min();
                 dtrEntry.Text = $"Ventures: {pendingVentures.Count}/{_retainers.Count()} ({Helpers.FormatTimeSpan(Helpers.TimeLeftFromNow(upcomingVenture))})";
+                dtrEntry.Tooltip = null;
             }
             else
             {
                 dtrEntry.Text = $"Ventures: 0/{_retainers.Count()}";
+                dtrEntry.Tooltip = null;
             }
         }
     }
