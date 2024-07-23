@@ -3,7 +3,7 @@
         "Author": "Redeven",
         "Name": "VentureTime",
         "InternalName": "VentureTime",
-        "AssemblyVersion": "1.0.0.1",
+        "AssemblyVersion": "1.0.0.2",
         "Description": "Display your retainers' remaining venture time in the DTR bar.",
         "ApplicableVersion": "any",
         "RepoUrl": "https://github.com/redeven/VentureTime",
@@ -20,7 +20,7 @@
         "IconUrl": "https://raw.githubusercontent.com/redeven/VentureTime/master/Data/icon.png",
         "Punchline": "Display your retainers' remaining venture time in the DTR bar.",
         "AcceptsFeedback": true,
-        "LastUpdated": 1721684192,
+        "LastUpdated": 1721777862,
         "DownloadLinkInstall": "https://raw.githubusercontent.com/redeven/VentureTime/master/VentureTime/bin/x64/Release/VentureTime/latest.zip",
         "DownloadLinkTesting": "https://raw.githubusercontent.com/redeven/VentureTime/master/VentureTime/bin/x64/Release/VentureTime/latest.zip",
         "DownloadLinkUpdate": "https://raw.githubusercontent.com/redeven/VentureTime/master/VentureTime/bin/x64/Release/VentureTime/latest.zip"

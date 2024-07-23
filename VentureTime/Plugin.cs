@@ -13,6 +13,7 @@ namespace VentureTime;
 public sealed class Plugin : IDalamudPlugin
 {
     private RetainerInfo[]? retainers;
+    private byte? retainerCount;
     private readonly IDtrBarEntry dtrEntry;
     private readonly Timer dtrTextTimer = new Timer(1000);
 
@@ -20,15 +21,13 @@ public sealed class Plugin : IDalamudPlugin
     {
         pluginInterface.Create<Svc>();
 
-        Worlds.GetWorlds();
-
         dtrEntry = Svc.DtrBar.Get("VentureTime");
         dtrEntry.Text = $"Ventures: ?/?";
         dtrEntry.Tooltip = "Interact with a Summoning Bell to initialize data";
         dtrEntry.Shown = true;
 
         CheckRetainerInfo();
-        GetDtrText();
+        UpdateDtrText();
 
         Svc.AddonLifecycle.RegisterListener(AddonEvent.PostRequestedUpdate, "RetainerList", OnRetainerList);
         dtrTextTimer.Elapsed += OnTimerElapsed;
@@ -40,7 +39,6 @@ public sealed class Plugin : IDalamudPlugin
         dtrEntry.Remove();
         Svc.AddonLifecycle.UnregisterListener(OnRetainerList);
         dtrTextTimer?.Stop();
-        dtrTextTimer?.Dispose();
     }
 
     private void OnRetainerList(AddonEvent type, AddonArgs args)
@@ -50,7 +48,7 @@ public sealed class Plugin : IDalamudPlugin
 
     private void OnTimerElapsed(object? sender, ElapsedEventArgs e)
     {
-        GetDtrText();
+        UpdateDtrText();
     }
 
     private unsafe void CheckRetainerInfo()
@@ -63,20 +61,16 @@ public sealed class Plugin : IDalamudPlugin
             return;
 
         var retainerList = manager->Retainers;
-        var info = new PlayerInfo(Svc.ClientState.LocalPlayer!);
-        var count = manager->GetRetainerCount();
-
+        retainerCount = manager->GetRetainerCount();
         retainers = RetainerInfo.GenerateDefaultArray();
-
-        for (byte i = 0; i < count; ++i)
+        for (byte i = 0; i < retainerCount; ++i)
         {
-            var retainer = retainerList[i];
-            var data = new RetainerInfo(retainer);
-            retainers[i] = data;
+            var retainer = new RetainerInfo(retainerList[i]);
+            retainers[i] = retainer;
         }
     }
 
-    private void GetDtrText()
+    private void UpdateDtrText()
     {
         if (retainers != null)
         {
