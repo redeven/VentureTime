@@ -57,7 +57,7 @@ public sealed class Plugin : IDalamudPlugin
             return;
 
         var manager = RetainerManager.Instance();
-        if (manager == null || manager->Ready != 1)
+        if (manager == null || manager->IsReady == false)
             return;
 
         var retainerList = manager->Retainers;
