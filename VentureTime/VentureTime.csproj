@@ -6,7 +6,6 @@
     <Description>Display your retainers' remaining venture time in the DTR bar</Description>
     <PackageProjectUrl>https://github.com/redeven/VentureTime</PackageProjectUrl>
     <PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
-    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
